@@ -22,4 +22,16 @@ Route::get('trangchu', [PageController::class , 'getIndex']);
 Route::get('/type/{id}', [PageController::class , 'getLoaiSp']);
 Route::get('/contact', [PageController::class , 'getContact']);
 Route::get('/about', [PageController::class , 'getAbout']);
-Route::get('form',[PageController::class,'getAdminAdd']);
+Route::get('/showadmin',[PageController::class, 'getIndexAdmin']);
+//Add
+Route::get('/admin-add-form',[PageController::class, 'getAdminpage']);
+Route::post('/admin-add-form',[PageController::class,'postAdminAdd'])->name('add-product');
+//Edit
+// Route::get('/admin-edit-form/{id}',[PageController::class,'getAdminEdit']);
+// Route::post('/admin-edit',[PageController::class,'postAdminEdit']);
+// Route::post('/admin-delete/{id}',[PageController::class,'postAdminDelete']);
+Route::get('/admin-edit-form/{id}',[PageController::class,'getAdminEdit']);
+Route::post('/admin-edit',[PageController::class,'postAdminEdit']);
+//delete
+Route::post('/admin-delete/{id}',[PageController::class,'postAdminDelete']);
+
