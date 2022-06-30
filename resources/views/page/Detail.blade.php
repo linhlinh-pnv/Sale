@@ -123,7 +123,7 @@
                     <div class="col-sm-4">                                                          
                       <div class="single-item">                                                         
                         <div class="single-item-header">                                                            
-                          <a href="detail/{{$sp->id}}"><img src="/source/image/product/{{$sp->image}}" alt=""></a>                                                          
+                          <a href="detail/{{$sp->id}}"><img src="/sources/image/product/{{$sp->image}}" alt=""></a>                                                          
                         </div>                                                          
                         @if($sp->promotion_price==!0)                                                           
                         <div class="ribbon-wrapper">                                                            
@@ -158,8 +158,9 @@
                   <h3 class="widget-title">Best Sellers</h3>                                                            
                   <div class="widget-body">                                                         
                     <div class="beta-sales beta-lists">                                                         
-                      <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/1.png"                                                          
+                      <div class="media beta-sales-item"> 
+					                                                        
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/1.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -167,7 +168,7 @@
                         </div>                                                          
                       </div>                                                            
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/2.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/2.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -175,7 +176,7 @@
                         </div>                                                          
                       </div>                                                            
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/3.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/3.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -183,7 +184,7 @@
                         </div>                                                          
                       </div>                                                            
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/4.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/4.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -198,7 +199,7 @@
                   <div class="widget-body">                                                         
                     <div class="beta-sales beta-lists">                                                         
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/1.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/1.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -206,7 +207,7 @@
                         </div>                                                          
                       </div>                                                            
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/2.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/2.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -214,7 +215,7 @@
                         </div>                                                          
                       </div>                                                            
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/3.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/3.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          
@@ -222,7 +223,7 @@
                         </div>                                                          
                       </div>                                                            
                       <div class="media beta-sales-item">                                                           
-                        <a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/4.png"                                                          
+                        <a class="pull-left" href="product.html"><img src="sources/assets/dest/images/products/sales/4.png"                                                          
                             alt=""></a>                                                         
                         <div class="media-body">                                                            
                           Sample Woman Top                                                          

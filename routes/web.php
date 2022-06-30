@@ -35,3 +35,4 @@ Route::post('/admin-edit',[PageController::class,'postAdminEdit']);
 //delete
 Route::post('/admin-delete/{id}',[PageController::class,'postAdminDelete']);
 
+Route::get('/detail/{id}',[PageController::class,'getDetail']);
