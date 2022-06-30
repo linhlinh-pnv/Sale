@@ -13,12 +13,16 @@ class PageController extends Controller
     public function getIndex()
     {
         $slide = Slide::all();
-        $new_product = Product::where('new',1)->paginate(8);									
+        $new_product = Product::where('new',1)->paginate(8);
+        $sanpham_khuyenmai = Product::where('promotion_price','<>', 0) -> paginate(4);
+        $new_promotion = Product::where('promotion_price', '<>', 0) ->get();
+        // $top_product = Product::where('top',1)->paginate(8);									
         //dd($new_product);									
     		
        
-        return view('page.trangchu', compact('slide', 'new_product'));
+        return view('page.trangchu', compact('slide', 'new_product','sanpham_khuyenmai'));
     }
+    
     public function getLoaiSp($type)
     {
         $sp_theoloai = Product::where('id_type', $type)->get();
@@ -26,6 +30,12 @@ class PageController extends Controller
         $sp_khac = Product::where('id_type', '<>', $type)->paginate(3);
 
         return view('page.loai_sanpham', compact('sp_theoloai', 'type_product', 'sp_khac'));
+    }
+    public function getDetail(Request $request){
+        $sanpham = Product::where('id',$request->id)->first();
+        $splienquan=Product::where('id','<>',$sanpham->id,'and','id_type','=',$sanpham->id_type,)->paginate(3);
+        $comments=Comment::where('id_product',$request->id)->get();
+        return view('page.Detail',compact('sanpham','splienquan','comments'));
     }
     public function getAdminpage(){
         return view ('pageadmin.formAdd');
@@ -159,11 +169,6 @@ class PageController extends Controller
 //         $product->save();
 //         return $this->getIndexAdmin();
 //     }
-//     public function getDetail(Request $request){
-//         $sanpham = Product::where('id',$request->id)->first();
-//         $splienquan=Product::where('id','<>',$sanpham->id,'and','id_type','=',$sanpham->id_type,)->paginate(3);
-//         $comments=Comment::where('id_product',$request->id)->get();
-//         return view('page.chititet_sanpham',compact('sanpham','splienquan','comments'));
-//     }
+
    
 // }
