@@ -7,6 +7,9 @@ use App\Models\Slide;
 use App\Models\Product;
 use App\Models\ProductType;
 use App\Models\Comment;
+use App\Models\Cart;
+use Illuminate\Support\Facades\Session;
+
 
 class PageController extends Controller
 {
@@ -105,6 +108,15 @@ class PageController extends Controller
         $product->delete();
         return redirect('/showadmin');
 }
+
+public function getAddToCart(Request $req, $id){                                        
+        $product = Product::find($id);                                        
+        $oldCart = Session('cart')?Session::get('cart'):null;                                        
+        $cart = new Cart($oldCart);                                        
+        $cart->add($product,$id);                                        
+        $req->session()->put('cart', $cart);                                        
+        return redirect()->back();                                        
+    } 
 }
 //     public function getAdminAdd(){
 //         return view('pageadmin.formAdd');
